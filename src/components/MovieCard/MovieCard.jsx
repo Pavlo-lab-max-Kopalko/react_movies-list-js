@@ -8,6 +8,7 @@ export const MovieCard = ({ movie }) => {
           <img data-cy="MovieImage" src={movie.imgUrl} alt="Film logo" />
         </figure>
       </div>
+
       <div className="card-content">
         <div className="media">
           <div className="media-left">
@@ -17,13 +18,16 @@ export const MovieCard = ({ movie }) => {
           </div>
         </div>
       </div>
+
       <div className="media-content">
         <p className="title is-8" data-cy="MovieTitle">
           {movie.title}
         </p>
       </div>
+
       <div className="content">
         <p data-cy="MovieDescription">{movie.description}</p>
+
         <a href={movie.imdbUrl} data-cy="MovieLink">
           IMDB
         </a>

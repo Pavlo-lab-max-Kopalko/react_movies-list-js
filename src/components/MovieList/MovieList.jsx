@@ -1,14 +1,14 @@
 import { MovieCard } from '../MovieCard/MovieCard';
 import './MovieList.scss';
 
-export const MovieList = ({ moviesFromServer }) => {
-  if (moviesFromServer.length === 0) {
-    return null;
+export const MovieList = ({ movies }) => {
+  if (movies.length === 0) {
+    return undefined;
   }
 
   return (
     <div className="movies">
-      {moviesFromServer.map(movie => (
+      {movies.map(movie => (
         <MovieCard movie={movie} key={movie.imdbId} />
       ))}
     </div>
